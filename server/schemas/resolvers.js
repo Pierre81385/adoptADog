@@ -54,5 +54,31 @@ const resolvers = {
     removeUser: async (parent, { userId }) => {
       return User.findOneAndDelete({ _id: userId });
     },
+
+    addDogToUser: async (parent, { userId, dog }) => {
+      return User.findOneAndUpdate(
+        { _id: userId },
+        {
+          $addToSet: { dog: dog },
+        },
+        {
+          new: true,
+          runValidators: true,
+        }
+      );
+    },
+
+    addUsertoDog: async (parent, { dogId, user }) => {
+      return Dog.findOneAndUpdate(
+        { _id: dogId },
+        {
+          $addToSet: { user: user },
+        },
+        {
+          new: true,
+          runValidators: true,
+        }
+      );
+    },
   },
 };

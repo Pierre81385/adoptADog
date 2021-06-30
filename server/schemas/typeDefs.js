@@ -8,6 +8,7 @@ const typeDefs = gql`
     email: String
     # There is now a field to store the user's password
     password: String
+    dog: [Dog]!
   }
 
   type Dog {
@@ -17,6 +18,7 @@ const typeDefs = gql`
     age: Integer
     size: Integer
     gender: Boolean
+    user: [User]!
   }
 
   # Set up an Auth type to handle returning data from a profile creating or user login
@@ -34,18 +36,21 @@ const typeDefs = gql`
   }
 
   type Mutation {
-    # Set up mutations to handle creating a profile or logging into a profile and return Auth type
+    # Set up mutations to handle creating a user or logging into a user and return Auth type
     addUser(name: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
 
     # Add a dog to a user
-    addDog(profileId: ID!, skill: String!): Profile
+    addDogToUser(userId: ID!, dog: Dog!): User
+
+    # Add a user to a dog
+    addUserToDog(dogId: ID!, user: User!); Dog
 
     # Remove a dog from a user
     removeDog(dogId: ID!): Dog
 
     # Delete a user
-    removeSkill(profileId: ID!, skill: String!): Profile
+    removeUser(userId: ID!): User
   }
 `;
 
