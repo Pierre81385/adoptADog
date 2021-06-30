@@ -51,6 +51,7 @@ const resolvers = {
       return { token, user };
     },
 
+    //remove user
     removeUser: async (parent, { userId }) => {
       return User.findOneAndDelete({ _id: userId });
     },
