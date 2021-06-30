@@ -1,242 +1,135 @@
-const mongoose = require("mongoose");
-const db = require("../models");
-
-mongoose.connect("mongodb://localhost/doggy", {
-    useNewUrlParser: true,
-    useFindAndModify: false,
-    useUnifiedTopology: true,
-  });
-
-
-const adoptDog = [
-    {
-    Dog: [
-        {
-        name: "Abby" ,
-        breed: "American Bulldog" ,
-        age: 3,
-        size: Large,
-        gender: true,
-
-        }
-    ]
-    },
-    {
-    Dog: [
-        {
-        name: "Annie" ,
-        breed: "German Shepherd" ,
-        age: 2,
-        size: large,
-        gender: false,
-
-        }
-    ]
-    },
-    {
-    Dog: [
-        {
-        name: "Bailey" ,
-        breed: "Bulldog" ,
-        age: 4,
-        size: medium,
-        gender: false,
-
-        }
-    ]
-    },
-    {
-    Dog: [
-        {
-        name: "Charlie" ,
-        breed: "labrador mix" ,
-        age: 2,
-        size: large,
-        gender: false,
-
-        }
-    ]
-    },
-    {
-    Dog: [
-        {
-        name: "Felix" ,
-        breed: "Rottweiler" ,
-        age: 2,
-        size: large,
-        gender: true,
-
-        }
-    ]
-    },
-    {
-    Dog: [
-        {
-        name: "Jack" ,
-        breed: "Chihuahua" ,
-        age: 6,
-        size: small,
-        gender: false,
-
-        }
-    ]
-    },
-    {
-    Dog: [
-        {
-        name: "Oliver" ,
-        breed: "Poodle mix" ,
-        age: 1,
-        size: medium,
-        gender: true,
-
-        }
-    ]
-    },
-    {
-    Dog: [
-        {
-        name: "Oscar" ,
-        breed: "Terrier mix" ,
-        age: 2,
-        size: medium,
-        gender: false,
-
-        }
-    ]
-    },
-    {
-    Dog: [
-        {
-        name: "Otis" ,
-        breed: "Boxer" ,
-        age: 2,
-        size: large,
-        gender: true,
-
-        }
-    ]
-    },
-    {
-    Dog: [
-        {
-        name: "Pete" ,
-        breed: "Bulldog" ,
-        age: 3,
-        size: medium,
-        gender: false,
-
-        }
-    ]
-    },
-    {
-    Dog: [
-        {
-        name: "Duke" ,
-        breed: "Labrador mix" ,
-        age: 2,
-        size: large,
-        gender: true,
-
-        }
-    ]
-    },
-    {
-    Dog: [
-        {
-        name: "Teddy" ,
-        breed: "Dachsund" ,
-        age: 7,
-        size: small,
-        gender: true,
-
-        }
-    ]
-    },
-    {
-    Dog: [
-        {
-        name: "Tater" ,
-        breed: "Pug" ,
-        age: 2,
-        size: small,
-        gender: true,
-
-        }
-    ]
-    },
-    {
-    Dog: [
-        {
-        name: "Rufus" ,
-        breed: "Terrier" ,
-        age: 1,
-        size: small,
-        gender: false,
-
-        }
-    ]
-    },
-    {
-    Dog: [
-        {
-        name: "Indy" ,
-        breed: "Husky" ,
-        age: 3,
-        size: large,
-        gender: false,
-
-        }
-    ]
-    },
-    {
-    Dog: [
-        {
-        name: "Sophie" ,
-        breed: "Poodle" ,
-        age: 2,
-        size: small,
-        gender: true,
-
-        }
-    ]
-    },
-    {
-    Dog: [
-        {
-        name: "Theo" ,
-        breed: "Schnauzer" ,
-        age: 4,
-        size: medium,
-        gender: false,
-
-        }
-    ]
-    },
-    {
-    Dog: [
-        {
-        name: "Penny" ,
-        breed: "Shar Pei" ,
-        age: 1,
-        size: large,
-        gender: true,
-
-        }
-    ]
-    },
-    {
-    Dog: [
-        {
-        name: "Rocky" ,
-        breed: "French Bulldog" ,
-        age: 3,
-        size: small,
-        gender: false,
-
-        }
-    ]
-    },
-
-
+[
+  {
+    "name": "Abby",
+    "breed": "American Bulldog",
+    "age": 3,
+    "size": "Large",
+    "gender": true
+  },
+  {
+    "name": "Annie",
+    "breed": "German Shepherd",
+    "age": 2,
+    "size": "large",
+    "gender": false
+  },
+  {
+    "name": "Bailey",
+    "breed": "Bulldog",
+    "age": 4,
+    "size": "medium",
+    "gender": false
+  },
+  {
+    "name": "Charlie",
+    "breed": "labrador mix",
+    "age": 2,
+    "size": "large",
+    "gender": false
+  },
+  {
+    "name": "Felix",
+    "breed": "Rottweiler",
+    "age": 2,
+    "size": "large",
+    "gender": true
+  },
+  {
+    "name": "Jack",
+    "breed": "Chihuahua",
+    "age": 6,
+    "size": "small",
+    "gender": false
+  },
+  {
+    "name": "Oliver",
+    "breed": "Poodle mix",
+    "age": 1,
+    "size": "medium",
+    "gender": true
+  },
+  {
+    "name": "Oscar",
+    "breed": "Terrier mix",
+    "age": 2,
+    "size": "medium",
+    "gender": false
+  },
+  {
+    "name": "Otis",
+    "breed": "Boxer",
+    "age": 2,
+    "size": "large",
+    "gender": true
+  },
+  {
+    "name": "Pete",
+    "breed": "Bulldog",
+    "age": 3,
+    "size": "medium",
+    "gender": false
+  },
+  {
+    "name": "Duke",
+    "breed": "Labrador mix",
+    "age": 2,
+    "size": "large",
+    "gender": true
+  },
+  {
+    "name": "Teddy",
+    "breed": "Dachsund",
+    "age": 7,
+    "size": "small",
+    "gender": true
+  },
+  {
+    "name": "Tater",
+    "breed": "Pug",
+    "age": 2,
+    "size": "small",
+    "gender": true
+  },
+  {
+    "name": "Rufus",
+    "breed": "Terrier",
+    "age": 1,
+    "size": "small",
+    "gender": false
+  },
+  {
+    "name": "Indy",
+    "breed": "Husky",
+    "age": 3,
+    "size": "large",
+    "gender": false
+  },
+  {
+    "name": "Sophie",
+    "breed": "Poodle",
+    "age": 2,
+    "size": "small",
+    "gender": true
+  },
+  {
+    "name": "Theo",
+    "breed": "Schnauzer",
+    "age": 4,
+    "size": "medium",
+    "gender": false
+  },
+  {
+    "name": "Penny",
+    "breed": "Shar Pei",
+    "age": 1,
+    "size": "large",
+    "gender": true
+  },
+  {
+    "name": "Rocky",
+    "breed": "French Bulldog",
+    "age": 3,
+    "size": "small",
+    "gender": false
+  }
 ]
