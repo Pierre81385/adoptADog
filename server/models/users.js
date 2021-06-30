@@ -21,6 +21,12 @@ const userSchema = new Schema({
     required: true,
     minlength: 5,
   },
+  dog: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Dog",
+    },
+  ],
 });
 
 //middleware to create password
