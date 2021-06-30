@@ -12,27 +12,231 @@ const adoptDog = [
     {
     Dog: [
         {
-        name: "",
-        breed: "",
-        age: ,
-        size: ,
-        gender: ,
+        name: "Abby" ,
+        breed: "American Bulldog" ,
+        age: 3,
+        size: Large,
+        gender: true,
 
         }
     ]
-    }
+    },
+    {
+    Dog: [
+        {
+        name: "Annie" ,
+        breed: "German Shepherd" ,
+        age: 2,
+        size: large,
+        gender: false,
 
+        }
+    ]
+    },
+    {
+    Dog: [
+        {
+        name: "Bailey" ,
+        breed: "Bulldog" ,
+        age: 4,
+        size: medium,
+        gender: false,
 
+        }
+    ]
+    },
+    {
+    Dog: [
+        {
+        name: "Charlie" ,
+        breed: "labrador mix" ,
+        age: 2,
+        size: large,
+        gender: false,
 
+        }
+    ]
+    },
+    {
+    Dog: [
+        {
+        name: "Felix" ,
+        breed: "Rottweiler" ,
+        age: 2,
+        size: large,
+        gender: true,
 
+        }
+    ]
+    },
+    {
+    Dog: [
+        {
+        name: "Jack" ,
+        breed: "Chihuahua" ,
+        age: 6,
+        size: small,
+        gender: false,
 
+        }
+    ]
+    },
+    {
+    Dog: [
+        {
+        name: "Oliver" ,
+        breed: "Poodle mix" ,
+        age: 1,
+        size: medium,
+        gender: true,
 
+        }
+    ]
+    },
+    {
+    Dog: [
+        {
+        name: "Oscar" ,
+        breed: "Terrier mix" ,
+        age: 2,
+        size: medium,
+        gender: false,
 
+        }
+    ]
+    },
+    {
+    Dog: [
+        {
+        name: "Otis" ,
+        breed: "Boxer" ,
+        age: 2,
+        size: large,
+        gender: true,
 
+        }
+    ]
+    },
+    {
+    Dog: [
+        {
+        name: "Pete" ,
+        breed: "Bulldog" ,
+        age: 3,
+        size: medium,
+        gender: false,
 
+        }
+    ]
+    },
+    {
+    Dog: [
+        {
+        name: "Duke" ,
+        breed: "Labrador mix" ,
+        age: 2,
+        size: large,
+        gender: true,
 
+        }
+    ]
+    },
+    {
+    Dog: [
+        {
+        name: "Teddy" ,
+        breed: "Dachsund" ,
+        age: 7,
+        size: small,
+        gender: true,
 
+        }
+    ]
+    },
+    {
+    Dog: [
+        {
+        name: "Tater" ,
+        breed: "Pug" ,
+        age: 2,
+        size: small,
+        gender: true,
 
+        }
+    ]
+    },
+    {
+    Dog: [
+        {
+        name: "Rufus" ,
+        breed: "Terrier" ,
+        age: 1,
+        size: small,
+        gender: false,
+
+        }
+    ]
+    },
+    {
+    Dog: [
+        {
+        name: "Indy" ,
+        breed: "Husky" ,
+        age: 3,
+        size: large,
+        gender: false,
+
+        }
+    ]
+    },
+    {
+    Dog: [
+        {
+        name: "Sophie" ,
+        breed: "Poodle" ,
+        age: 2,
+        size: small,
+        gender: true,
+
+        }
+    ]
+    },
+    {
+    Dog: [
+        {
+        name: "Theo" ,
+        breed: "Schnauzer" ,
+        age: 4,
+        size: medium,
+        gender: false,
+
+        }
+    ]
+    },
+    {
+    Dog: [
+        {
+        name: "Penny" ,
+        breed: "Shar Pei" ,
+        age: 1,
+        size: large,
+        gender: true,
+
+        }
+    ]
+    },
+    {
+    Dog: [
+        {
+        name: "Rocky" ,
+        breed: "French Bulldog" ,
+        age: 3,
+        size: small,
+        gender: false,
+
+        }
+    ]
+    },
 
 
 ]
