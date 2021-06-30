@@ -1,5 +1,7 @@
 //define the resolvers and mutations to get and manipulate data (test in GraphQL)
 const { User, Dog } = require("../models");
+const { signToken } = require("../utils/auth");
+const { AuthenticationError } = require("apollo-server-express");
 
 const resolvers = {
   Query: {
