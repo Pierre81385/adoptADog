@@ -26,9 +26,9 @@ const typeDefs = gql`
   }
 
   type Query {
-    user: [User]!
+    users: [User]!
     user(userId: ID!): User
-    dog: [Dog]!
+    dogs: [Dog]!
     dog(dogId: ID!): Dog
     # Add query to find adopted dogs
   }

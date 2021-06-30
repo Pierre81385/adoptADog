@@ -27,6 +27,12 @@ const dogSchema = new Schema({
     type: Boolean,
     require: true,
   },
+  user: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "User",
+    },
+  ],
 });
 
 const Dog = model("dog", dogSchema);
