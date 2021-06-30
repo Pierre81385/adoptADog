@@ -3,7 +3,7 @@ import Card from "react-bootstrap/Card";
 import { Carousel, CarouselItem } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 
-function Portfolio() {
+function View() {
   const projectInfo = [
     {
       id: 0,
@@ -155,4 +155,4 @@ function Portfolio() {
   );
 }
 
-export default Portfolio;
+export default View;

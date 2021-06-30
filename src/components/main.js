@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import NavTabs from "./navTabs";
-import Home from "./pages/view";
+import Home from "./pages/home";
+import About from "./pages/about";
+import View from "./pages/view";
+import Summary from "./pages/summary";
+import Contact from "./pages/contact";
 
 export default function Main() {
   const [currentPage, setCurrentPage] = useState("Home");
@@ -13,10 +17,10 @@ export default function Main() {
       return <About />;
     }
     if (currentPage === "view") {
-      return <Portfolio />;
+      return <View />;
     }
     if (currentPage === "summary") {
-      return <Resume />;
+      return <Summary />;
     }
     return <Contact />;
   };
