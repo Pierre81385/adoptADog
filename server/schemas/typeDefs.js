@@ -15,8 +15,8 @@ const typeDefs = gql`
     _id: ID
     name: String
     breed: String
-    age: Integer
-    size: Integer
+    age: String
+    size: String
     gender: Boolean
     user: [User]!
   }
@@ -41,10 +41,10 @@ const typeDefs = gql`
     login(email: String!, password: String!): Auth
 
     # Add a dog to a user
-    addDogToUser(userId: ID!, dog: Dog!): User
+    #addDogToUser(userId: ID!, dog: Dog): User
 
     # Add a user to a dog
-    addUserToDog(dogId: ID!, user: User!); Dog
+    #addUserToDog(dogId: ID!, user: User): Dog
 
     # Remove a dog from a user
     removeDog(dogId: ID!): Dog
