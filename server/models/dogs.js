@@ -14,12 +14,12 @@ const dogSchema = new Schema({
     trim: true,
   },
   age: {
-    type: Integer,
+    type: String,
     require: true,
     trim: true,
   },
   size: {
-    type: Float,
+    type: String,
     require: true,
     trim: true,
   },
