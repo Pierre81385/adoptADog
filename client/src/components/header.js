@@ -31,14 +31,14 @@ const Header = () => {
             </>
           ) : (
             <>
-              <Link className="btn btn-lg btn-primary m-2" to="/login">
-                Login
+              <Link className="btn btn-lg btn-primary m-2" to="/about">
+                About
               </Link>
-              <Link className="btn btn-lg btn-light m-2" to="/signup">
-                Signup
+              <Link className="btn btn-lg btn-light m-2" to="/view">
+                Adopt
               </Link>
-              <Link className="btn btn-lg btn-light m-2" to="/aboutus">
-                About Us
+              <Link className="btn btn-lg btn-light m-2" to="/summary">
+                Summary{" "}
               </Link>
               <Link className="btn btn-lg btn-light m-2" to="/contact">
                 Contact
