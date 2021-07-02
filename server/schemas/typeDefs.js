@@ -5,7 +5,7 @@ const typeDefs = gql`
     _id: ID
     name: String
     breed: String
-    age: Int
+    age: String
     size: String
     gender: Boolean
   }
@@ -13,7 +13,6 @@ const typeDefs = gql`
   type User {
     _id: ID
     name: String
-    age: Number
     email: String
     password: String
   }
@@ -21,8 +20,8 @@ const typeDefs = gql`
   type Query {
     dogs: [Dog]
     dog(dogId: ID!): Dog
-    users: [User]
-    user(userId: ID!): User
+    # users: [User]
+    # user(userId: ID!): User
   }
 `;
 

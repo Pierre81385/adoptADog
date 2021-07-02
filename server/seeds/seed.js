@@ -1,13 +1,21 @@
 const db = require("../config/connection");
-const { Dog } = require("../models");
+const { Dog, User } = require("../models");
 
 const dogData = require("./dogSeeds.json");
+const userData = require("./userSeeds.json");
 
 db.once("open", async () => {
-  await Dog.deleteMany({});
+  if (Dog) {
+    await db.collection("Dog").deleteMany;
+  }
 
-  const dogs = await Dog.insertMany(dogData);
+  if (User) {
+    await db.collection("User").deleteMany;
+  }
 
-  console.log("dogs seeded!");
+  const dogs = await db.collection("Dog").insertMany(dogData);
+  const users = await db.collection("User").insertMany(userData);
+
+  console.log("dogs and users seeded!");
   process.exit(0);
 });
