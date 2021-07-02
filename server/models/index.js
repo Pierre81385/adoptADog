@@ -1,7 +1,3 @@
-//export models here
-
-const Dog = require("./dogs");
-const User = require("./users");
+const Dog = require("./Dog");
 
 module.exports = { Dog };
-module.exports = { User };
