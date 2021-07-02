@@ -2,21 +2,21 @@
   {
     "name": "Henry",
     "breed": "Bulldog",
-    "age": 2,
+    "age": "2",
     "size": "large",
     "gender": true
   },
   {
     "name": "Jasper",
     "breed": "Vizla",
-    "age": 10,
+    "age": "10",
     "size": "large",
     "gender": true
   },
   {
     "name": "Meelow",
     "breed": "Lab",
-    "age": 5,
+    "age": "5",
     "size": "medium",
     "gender": false
   }

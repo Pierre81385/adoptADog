@@ -5,7 +5,7 @@ const dogSchema = new Schema({
     type: String,
   },
   age: {
-    type: Number,
+    type: String,
   },
   size: {
     type: String,
