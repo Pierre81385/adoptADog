@@ -10,9 +10,19 @@ const typeDefs = gql`
     gender: Boolean
   }
 
+  type User {
+    _id: ID
+    name: String
+    age: Number
+    email: String
+    password: String
+  }
+
   type Query {
     dogs: [Dog]
     dog(dogId: ID!): Dog
+    users: [User]
+    user(userId: ID!): User
   }
 `;
 
