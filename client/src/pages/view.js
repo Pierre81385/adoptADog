@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import Card from "react-bootstrap/Card";
 import { Carousel, CarouselItem } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
