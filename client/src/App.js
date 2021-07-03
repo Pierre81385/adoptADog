@@ -11,11 +11,13 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Header from "./components/header";
 import Footer from "./components/footer";
-import Home from "./components/pages/home";
-import About from "./components/pages/about";
-import View from "./components/pages/view";
-import Summary from "./components/pages/summary";
-import Contact from "./components/pages/contact";
+//mport Main from "./components/main";
+
+import Home from "./pages/home";
+import About from "./pages/about";
+import View from "./pages/view";
+import Summary from "./pages/summary";
+import Contact from "./pages/contact";
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
