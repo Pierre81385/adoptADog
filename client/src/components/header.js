@@ -20,18 +20,18 @@ const Header = () => {
           Find your new best friend.
         </p>
         <div>
-          {Auth.loggedIn() ? (
+          {!Auth.loggedIn() ? (
             <>
-              <Link className="btn btn-lg btn-primary m-2" to="/me">
-                View My Profile
+              <Link className="btn btn-lg btn-primary m-2" to="/login">
+                Login
               </Link>
-              <button className="btn btn-lg btn-light m-2" onClick={logout}>
-                Logout
-              </button>
+              <Link className="btn btn-lg btn-primary m-2" to="/signup">
+                Sign Up
+              </Link>
             </>
           ) : (
             <>
-              <Link className="btn btn-lg btn-primary m-2" to="/about">
+              <Link className="btn btn-lg btn-light m-2" to="/about">
                 About
               </Link>
               <Link className="btn btn-lg btn-light m-2" to="/view">
@@ -42,6 +42,13 @@ const Header = () => {
               </Link>
               <Link className="btn btn-lg btn-light m-2" to="/contact">
                 Contact
+              </Link>
+              <Link
+                className="btn btn-lg btn-light m-2"
+                to="/login"
+                onClick={logout}
+              >
+                Logout
               </Link>
             </>
           )}

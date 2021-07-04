@@ -4,6 +4,9 @@ const bcrypt = require("bcrypt");
 const userSchema = new Schema({
   name: {
     type: String,
+    required: true,
+    unique: true,
+    trim: true,
   },
 
   email: {
@@ -29,7 +32,7 @@ userSchema.pre("save", async function (next) {
 });
 
 userSchema.methods.isCorrectPassword = async function (password) {
-  return bcyrpt.compare(password, this.password);
+  return bcrypt.compare(password, this.password);
 };
 
 const User = model("User", userSchema);
