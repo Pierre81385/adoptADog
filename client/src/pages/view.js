@@ -15,7 +15,7 @@ function View() {
       width: "250px",
       flex: 1,
       margin: "0 auto",
-      height: "500px",
+      height: "400px",
     },
     div: {
       // backgroundImage:
@@ -50,7 +50,7 @@ function View() {
                 aria-pressed="true"
                 block
               >
-                Deploy
+                LIKE
               </Button>
               <Button
                 style={style.Button}
@@ -62,31 +62,37 @@ function View() {
                 aria-pressed="true"
                 block
               >
-                Github
+                ADOPT
               </Button>
             </Card.Footer>
           </Card.Body>
         </Card>
         <a
-          class="carousel-control-prev"
+          className="carousel-control-prev"
           href="#carouselExampleControls"
           role="button"
           data-slide="prev"
         >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only" style={{ color: "white" }}>
-            SKIP
+          <span
+            className="carousel-control-prev-icon"
+            aria-hidden="true"
+          ></span>
+          <span className="sr-only" style={{ color: "white" }}>
+            PREVIOUS
           </span>
         </a>
         <a
-          class="carousel-control-next"
+          className="carousel-control-next"
           href="#carouselExampleControls"
           role="button"
           data-slide="next"
         >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only" style={{ color: "white" }}>
-            Adopt
+          <span
+            className="carousel-control-next-icon"
+            aria-hidden="true"
+          ></span>
+          <span className="sr-only" style={{ color: "white" }}>
+            NEXT
           </span>
         </a>
       </CarouselItem>
@@ -107,7 +113,7 @@ function View() {
     <div style={style.div}>
       <Carousel
         id="carouselExampleControls"
-        class="carousel slide "
+        className="carousel slide "
         data-ride="carousel"
         interval={null}
       >
