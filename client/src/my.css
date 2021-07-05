@@ -4,3 +4,11 @@
 .carousel-control-prev:hover {
   color: #000;
 }
+
+.carousel-control-next {
+  color: darkgrey;
+}
+
+.carousel-control-prev {
+  color: darkgrey;
+}
