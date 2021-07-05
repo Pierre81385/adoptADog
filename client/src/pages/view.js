@@ -4,6 +4,7 @@ import { Carousel, CarouselItem } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 
 import { QUERY_DOGS } from "../utils/queries";
+import { LIKE_DOG } from "../utils/mutation";
 import { useQuery } from "@apollo/client";
 
 function View() {
@@ -81,7 +82,7 @@ function View() {
             className="carousel-control-prev-icon"
             aria-hidden="true"
           ></span>
-          <span className="sr-only" style={{ color: "white" }}>
+          <span className="sr-only" style={{ color: "black" }}>
             PREVIOUS
           </span>
         </a>
@@ -95,7 +96,7 @@ function View() {
             className="carousel-control-next-icon"
             aria-hidden="true"
           ></span>
-          <span className="sr-only" style={{ color: "white" }}>
+          <span className="sr-only" style={{ color: "black" }}>
             NEXT
           </span>
         </a>
@@ -112,6 +113,13 @@ function View() {
   }
 
   console.log(dogArray);
+
+  //unfinished like button functionality
+  // const { dogId, liked } = useParams();
+
+  // const { loading, data } = useQuery(LIKE_DOG, {
+  //   variables: { dogId: dogId, liked: liked },
+  // });
 
   return (
     <div style={style.div}>

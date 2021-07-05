@@ -44,6 +44,30 @@ const resolvers = {
       // Return an `Auth` object that consists of the signed token and user's information
       return { token, user };
     },
+    likeDog: async (parent, { dogId, liked }) => {
+      return Dog.findOneAndUpdate(
+        { _id: dogId },
+        {
+          $addToSet: { liked: liked },
+        },
+        {
+          new: true,
+          runValidators: true,
+        }
+      );
+    },
+    adoptDog: async (parent, { dogId, adopted }) => {
+      return Dog.findOneAndUpdate(
+        { _id: dogId },
+        {
+          $addToSet: { adopted: adopted },
+        },
+        {
+          new: true,
+          runValidators: true,
+        }
+      );
+    },
   },
 };
 

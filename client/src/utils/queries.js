@@ -9,6 +9,8 @@ export const QUERY_DOGS = gql`
       age
       size
       gender
+      liked
+      adopted
     }
   }
 `;
@@ -22,6 +24,8 @@ export const QUERY_SINGLE_DOG = gql`
       age
       size
       gender
+      liked
+      adopted
     }
   }
 `;

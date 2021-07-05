@@ -16,6 +16,12 @@ const dogSchema = new Schema({
   gender: {
     type: Boolean,
   },
+  liked: {
+    type: Boolean,
+  },
+  adopted: {
+    type: Boolean,
+  },
 });
 
 const Dog = model("Dog", dogSchema);

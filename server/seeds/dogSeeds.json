@@ -5,7 +5,9 @@
     "breed": "Bulldog",
     "age": "2",
     "size": "large",
-    "gender": true
+    "gender": true,
+    "liked": true,
+    "adopted": false
   },
   {
     "image": "http://cdn.akc.org/content/article-body-image/golden_puppy_dog_pictures.jpg",
@@ -13,7 +15,9 @@
     "breed": "Vizla",
     "age": "10",
     "size": "large",
-    "gender": true
+    "gender": true,
+    "liked": true,
+    "adopted": false
   },
   {
     "image": "http://cdn.akc.org/content/article-body-image/pumi_dog_pictures.jpg",
@@ -21,6 +25,8 @@
     "breed": "Lab",
     "age": "5",
     "size": "medium",
-    "gender": false
+    "gender": false,
+    "liked": true,
+    "adopted": true
   }
 ]
