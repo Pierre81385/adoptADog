@@ -6,6 +6,7 @@ import Button from "react-bootstrap/Button";
 import { QUERY_DOGS } from "../utils/queries";
 import { LIKE_DOG } from "../utils/mutation";
 import { useQuery } from "@apollo/client";
+import "../App.css";
 
 function View() {
   const { loading, data } = useQuery(QUERY_DOGS);
@@ -74,6 +75,7 @@ function View() {
         </Card>
         <a
           className="carousel-control-prev"
+          style=""
           href="#carouselExampleControls"
           role="button"
           data-slide="prev"
