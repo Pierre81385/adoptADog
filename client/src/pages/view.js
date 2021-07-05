@@ -34,7 +34,11 @@ function View() {
     return (
       <CarouselItem>
         <Card className="card" style={style.card} key={oneDog.id}>
-          <Card.Img variant="top" src="" class="img-responsive center-block" />
+          <Card.Img
+            variant="top"
+            src={oneDog.image}
+            class="img-responsive center-block"
+          />
           <Card.Body>
             <Card.Title>{oneDog.name}</Card.Title>
 

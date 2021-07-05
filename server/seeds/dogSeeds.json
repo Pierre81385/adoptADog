@@ -1,5 +1,6 @@
 [
   {
+    "image": "http://cdn.akc.org/content/article-body-image/keeshond_dog_pictures.jpg",
     "name": "Henry",
     "breed": "Bulldog",
     "age": "2",
@@ -7,6 +8,7 @@
     "gender": true
   },
   {
+    "image": "http://cdn.akc.org/content/article-body-image/golden_puppy_dog_pictures.jpg",
     "name": "Jasper",
     "breed": "Vizla",
     "age": "10",
@@ -14,6 +16,7 @@
     "gender": true
   },
   {
+    "image": "http://cdn.akc.org/content/article-body-image/pumi_dog_pictures.jpg",
     "name": "Meelow",
     "breed": "Lab",
     "age": "5",

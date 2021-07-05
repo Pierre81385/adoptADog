@@ -1,6 +1,9 @@
 const { Schema, model } = require("mongoose");
 
 const dogSchema = new Schema({
+  image: {
+    type: String,
+  },
   name: {
     type: String,
   },
