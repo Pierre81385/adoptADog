@@ -3,6 +3,7 @@ const { gql } = require("apollo-server-express");
 const typeDefs = gql`
   type Dog {
     _id: ID
+    image: String
     name: String
     breed: String
     age: String

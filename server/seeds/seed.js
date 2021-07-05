@@ -6,15 +6,15 @@ const userData = require("./userSeeds.json");
 
 db.once("open", async () => {
   if (Dog) {
-    await db.collection("Dog").deleteMany;
+    await db.collection("dogs").deleteMany;
   }
 
   if (User) {
-    await db.collection("User").deleteMany;
+    await db.collection("users").deleteMany;
   }
 
-  const dogs = await db.collection("Dog").insertMany(dogData);
-  const users = await db.collection("User").insertMany(userData);
+  const dogs = await db.collection("dogs").insertMany(dogData);
+  const users = await db.collection("users").insertMany(userData);
 
   console.log("dogs and users seeded!");
   process.exit(0);
