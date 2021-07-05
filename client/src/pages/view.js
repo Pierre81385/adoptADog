@@ -84,9 +84,7 @@ function View() {
             className="carousel-control-prev-icon"
             aria-hidden="true"
           ></span>
-          <span className="sr-only" style={{ color: "black" }}>
-            PREVIOUS
-          </span>
+          <span className="sr-only" style={{ color: "black" }}></span>
         </a>
         <a
           className="carousel-control-next"
@@ -98,9 +96,7 @@ function View() {
             className="carousel-control-next-icon"
             aria-hidden="true"
           ></span>
-          <span className="sr-only" style={{ color: "black" }}>
-            NEXT
-          </span>
+          <span className="sr-only" style={{ color: "black" }}></span>
         </a>
       </CarouselItem>
     );
