@@ -23,3 +23,29 @@ export const LOGIN_USER = gql`
     }
   }
 `;
+
+export const LIKE_DOG = gql`
+  mutation likeDog($dogId: ID!, $liked: Boolean!) {
+    likeDog(dogId: $dogId, liked: $liked) {
+      token {
+        user {
+          _id
+          name
+        }
+      }
+    }
+  }
+`;
+
+export const ADOPT_DOG = gql`
+  mutation adoptDog($dogId: ID!, $adopted: Boolean!) {
+    likeDog(dogId: $dogId, adopted: $adopted) {
+      token {
+        user {
+          _id
+          name
+        }
+      }
+    }
+  }
+`;
