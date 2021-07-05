@@ -2,10 +2,11 @@ import React, { Component } from "react";
 import Card from "react-bootstrap/Card";
 import { Carousel, CarouselItem } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
+import { Redirect, useParams } from "react-router-dom";
 
 import { QUERY_DOGS } from "../utils/queries";
+import { useMutation, useQuery } from "@apollo/client";
 import { LIKE_DOG } from "../utils/mutation";
-import { useQuery } from "@apollo/client";
 
 function View() {
   const { loading, data } = useQuery(QUERY_DOGS);
@@ -44,16 +45,28 @@ function View() {
             <Card.Title>{oneDog.name}</Card.Title>
 
             <Card.Text>{oneDog.size}</Card.Text>
+            <div>
+              {oneDog.adopted === true ? (
+                <>
+                  <Card.Text>ADOPTED</Card.Text>
+                </>
+              ) : (
+                <>
+                  <Card.Text>AVAILIBLE</Card.Text>
+                </>
+              )}
+            </div>
             <Card.Footer class="text-center">
               <Button
                 style={style.Button}
                 href=""
-                name="Dislike"
+                name="like"
                 variant="outline-dark"
                 class="btn btn-primary btn-lg active float-left"
                 role="button"
                 aria-pressed="true"
                 block
+                onClick={handleLikeClick}
               >
                 LIKE
               </Button>
@@ -61,44 +74,31 @@ function View() {
                 style={style.Button}
                 variant="outline-dark"
                 href=""
-                name="like"
+                name="adopt"
                 class="btn btn-primary btn-lg active float-right"
                 role="button"
                 aria-pressed="true"
                 block
+                onClick={handleAdoptClick}
               >
                 ADOPT
               </Button>
             </Card.Footer>
           </Card.Body>
         </Card>
-        {/* <a
-          className="carousel-control-prev"
-          href="#carouselExampleControls"
-          role="button"
-          data-slide="prev"
-        >
-          <span
-            className="carousel-control-prev-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="sr-only" style={{ color: "black" }}></span>
-        </a>
-        <a
-          className="carousel-control-next"
-          href="#carouselExampleControls"
-          role="button"
-          data-slide="next"
-        >
-          <span
-            className="carousel-control-next-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="sr-only" style={{ color: "black" }}></span>
-        </a> */}
       </CarouselItem>
     );
   };
+
+  function handleLikeClick(e) {
+    e.preventDefault();
+    console.log("The like button was clicked.");
+  }
+
+  function handleAdoptClick(e) {
+    e.preventDefault();
+    console.log("The adopt button was clicked.");
+  }
 
   const dogArray = [];
 
@@ -109,13 +109,6 @@ function View() {
   }
 
   console.log(dogArray);
-
-  //unfinished like button functionality
-  // const { dogId, liked } = useParams();
-
-  // const { loading, data } = useQuery(LIKE_DOG, {
-  //   variables: { dogId: dogId, liked: liked },
-  // });
 
   return (
     <div style={style.div}>
