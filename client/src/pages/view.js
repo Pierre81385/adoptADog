@@ -72,7 +72,7 @@ function View() {
             </Card.Footer>
           </Card.Body>
         </Card>
-        <a
+        {/* <a
           className="carousel-control-prev"
           href="#carouselExampleControls"
           role="button"
@@ -95,7 +95,7 @@ function View() {
             aria-hidden="true"
           ></span>
           <span className="sr-only" style={{ color: "black" }}></span>
-        </a>
+        </a> */}
       </CarouselItem>
     );
   };
