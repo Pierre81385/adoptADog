@@ -6,7 +6,6 @@ import Button from "react-bootstrap/Button";
 import { QUERY_DOGS } from "../utils/queries";
 import { LIKE_DOG } from "../utils/mutation";
 import { useQuery } from "@apollo/client";
-import "../my.css";
 
 function View() {
   const { loading, data } = useQuery(QUERY_DOGS);
@@ -123,7 +122,7 @@ function View() {
     <div style={style.div}>
       <Carousel
         id="carouselExampleControls"
-        className="carousel slide "
+        className="carousel carousel-dark slide "
         data-ride="carousel"
         interval={null}
       >
