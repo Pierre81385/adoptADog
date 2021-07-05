@@ -5,7 +5,7 @@ export const QUERY_DOGS = gql`
       _id
       image
       name
-      breed
+      desc
       age
       size
       gender
@@ -20,7 +20,7 @@ export const QUERY_SINGLE_DOG = gql`
       _id
       image
       name
-      breed
+      desc
       age
       size
       gender

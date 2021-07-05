@@ -2,11 +2,9 @@ import React, { Component } from "react";
 import Card from "react-bootstrap/Card";
 import { Carousel, CarouselItem } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
-import { Redirect, useParams } from "react-router-dom";
 
 import { QUERY_DOGS } from "../utils/queries";
 import { useMutation, useQuery } from "@apollo/client";
-import { LIKE_DOG } from "../utils/mutation";
 
 function View() {
   const { loading, data } = useQuery(QUERY_DOGS);
@@ -17,7 +15,7 @@ function View() {
       width: "250px",
       flex: 1,
       margin: "0 auto",
-      height: "400px",
+      height: "475px",
     },
     div: {
       // backgroundImage:
@@ -43,20 +41,42 @@ function View() {
           />
           <Card.Body>
             <Card.Title>{oneDog.name}</Card.Title>
-
-            <Card.Text>{oneDog.size}</Card.Text>
             <div>
-              {oneDog.adopted === true ? (
+              {oneDog.gender === true ? (
                 <>
-                  <Card.Text>ADOPTED</Card.Text>
+                  <Card.Text>MALE</Card.Text>
                 </>
               ) : (
                 <>
-                  <Card.Text>AVAILIBLE</Card.Text>
+                  <Card.Text>FEMALE</Card.Text>
                 </>
               )}
             </div>
-            <Card.Footer class="text-center">
+            <Card.Text>{oneDog.size}</Card.Text>
+            <div>
+              {oneDog.liked === true ? (
+                <>
+                  <Card.Text>👍</Card.Text>
+                </>
+              ) : (
+                <>
+                  <Card.Text></Card.Text>
+                </>
+              )}
+            </div>
+            <Card.Text>{oneDog.desc}</Card.Text>
+            <div>
+              {oneDog.adopted === true ? (
+                <>
+                  <Card.Text>❤️ - I've been adopted!</Card.Text>
+                </>
+              ) : (
+                <>
+                  <Card.Text>🐶 - Looking for my forever home!</Card.Text>
+                </>
+              )}
+            </div>
+            <Card.Footer class="text-center" style={{ paddingTop: "10px" }}>
               <Button
                 style={style.Button}
                 href=""
