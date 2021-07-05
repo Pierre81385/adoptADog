@@ -6,7 +6,7 @@ import Button from "react-bootstrap/Button";
 import { QUERY_DOGS } from "../utils/queries";
 import { LIKE_DOG } from "../utils/mutation";
 import { useQuery } from "@apollo/client";
-import "../App.css";
+import "../my.css";
 
 function View() {
   const { loading, data } = useQuery(QUERY_DOGS);
