@@ -75,7 +75,6 @@ function View() {
         </Card>
         <a
           className="carousel-control-prev"
-          style=""
           href="#carouselExampleControls"
           role="button"
           data-slide="prev"
