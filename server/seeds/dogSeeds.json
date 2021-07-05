@@ -2,7 +2,7 @@
   {
     "image": "http://cdn.akc.org/content/article-body-image/keeshond_dog_pictures.jpg",
     "name": "Henry",
-    "breed": "Bulldog",
+    "desc": "Henry's a fun loving fluffy buddy!",
     "age": "2",
     "size": "large",
     "gender": true,
@@ -12,17 +12,17 @@
   {
     "image": "http://cdn.akc.org/content/article-body-image/golden_puppy_dog_pictures.jpg",
     "name": "Jasper",
-    "breed": "Vizla",
+    "desc": "Jasper is a little cuddle bug.",
     "age": "10",
-    "size": "large",
+    "size": "small",
     "gender": true,
-    "liked": true,
+    "liked": false,
     "adopted": false
   },
   {
     "image": "http://cdn.akc.org/content/article-body-image/pumi_dog_pictures.jpg",
     "name": "Meelow",
-    "breed": "Lab",
+    "desc": "Meelow isn't the smartest, but he's a happy boi.",
     "age": "5",
     "size": "medium",
     "gender": false,

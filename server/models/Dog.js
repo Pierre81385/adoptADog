@@ -7,6 +7,9 @@ const dogSchema = new Schema({
   name: {
     type: String,
   },
+  desc: {
+    type: String,
+  },
   age: {
     type: String,
   },

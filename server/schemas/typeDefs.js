@@ -5,7 +5,7 @@ const typeDefs = gql`
     _id: ID
     image: String
     name: String
-    breed: String
+    desc: String
     age: String
     size: String
     gender: Boolean
