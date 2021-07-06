@@ -16,6 +16,6 @@ db.once("open", async () => {
   const dogs = await db.collection("dogs").insertMany(dogData);
   const users = await db.collection("users").insertMany(userData);
 
-  console.log("dogs and users seeded!");
+  console.log("dogs and users seeded! AGAIN");
   process.exit(0);
 });
