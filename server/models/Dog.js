@@ -1,7 +1,13 @@
 const { Schema, model } = require("mongoose");
 
 const dogSchema = new Schema({
+  image: {
+    type: String,
+  },
   name: {
+    type: String,
+  },
+  desc: {
     type: String,
   },
   age: {
@@ -11,6 +17,12 @@ const dogSchema = new Schema({
     type: String,
   },
   gender: {
+    type: Boolean,
+  },
+  liked: {
+    type: Boolean,
+  },
+  adopted: {
     type: Boolean,
   },
 });

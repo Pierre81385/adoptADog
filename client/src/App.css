@@ -24,6 +24,13 @@
   color: white;
 }
 
+.carousel-control-next:hover {
+  color: #000;
+}
+.carousel-control-prev:hover {
+  color: #000;
+}
+
 .App-link {
   color: #61dafb;
 }

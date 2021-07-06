@@ -4,7 +4,7 @@ import { Carousel, CarouselItem } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 
 import { QUERY_DOGS } from "../utils/queries";
-import { useQuery } from "@apollo/client";
+import { useMutation, useQuery } from "@apollo/client";
 
 function View() {
   const { loading, data } = useQuery(QUERY_DOGS);
@@ -15,7 +15,7 @@ function View() {
       width: "250px",
       flex: 1,
       margin: "0 auto",
-      height: "500px",
+      height: "475px",
     },
     div: {
       // backgroundImage:
@@ -34,64 +34,91 @@ function View() {
     return (
       <CarouselItem>
         <Card className="card" style={style.card} key={oneDog.id}>
-          <Card.Img variant="top" src="" class="img-responsive center-block" />
+          <Card.Img
+            variant="top"
+            src={oneDog.image}
+            class="img-responsive center-block"
+          />
           <Card.Body>
             <Card.Title>{oneDog.name}</Card.Title>
-
+            <div>
+              {oneDog.gender === true ? (
+                <>
+                  <Card.Text>MALE</Card.Text>
+                </>
+              ) : (
+                <>
+                  <Card.Text>FEMALE</Card.Text>
+                </>
+              )}
+            </div>
             <Card.Text>{oneDog.size}</Card.Text>
-            <Card.Footer class="text-center">
+            <div>
+              {oneDog.liked === true ? (
+                <>
+                  <Card.Text>👍</Card.Text>
+                </>
+              ) : (
+                <>
+                  <Card.Text></Card.Text>
+                </>
+              )}
+            </div>
+            <Card.Text>{oneDog.desc}</Card.Text>
+            <div>
+              {oneDog.adopted === true ? (
+                <>
+                  <Card.Text>❤️ - I've been adopted!</Card.Text>
+                </>
+              ) : (
+                <>
+                  <Card.Text>🐶 - Looking for my forever home!</Card.Text>
+                </>
+              )}
+            </div>
+            <Card.Footer class="text-center" style={{ paddingTop: "10px" }}>
               <Button
                 style={style.Button}
                 href=""
-                name="Dislike"
+                name="like"
                 variant="outline-dark"
                 class="btn btn-primary btn-lg active float-left"
                 role="button"
                 aria-pressed="true"
                 block
+                onClick={handleLikeClick}
               >
-                Deploy
+                LIKE
               </Button>
               <Button
                 style={style.Button}
                 variant="outline-dark"
                 href=""
-                name="like"
+                name="adopt"
                 class="btn btn-primary btn-lg active float-right"
                 role="button"
                 aria-pressed="true"
                 block
+                onClick={handleAdoptClick}
               >
-                Github
+                ADOPT
               </Button>
             </Card.Footer>
           </Card.Body>
         </Card>
-        <a
-          class="carousel-control-prev"
-          href="#carouselExampleControls"
-          role="button"
-          data-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only" style={{ color: "white" }}>
-            SKIP
-          </span>
-        </a>
-        <a
-          class="carousel-control-next"
-          href="#carouselExampleControls"
-          role="button"
-          data-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only" style={{ color: "white" }}>
-            Adopt
-          </span>
-        </a>
       </CarouselItem>
     );
   };
+
+  function handleLikeClick(e) {
+    e.preventDefault();
+    console.log("The like button was clicked.");
+  }
+
+  function handleAdoptClick(e) {
+    e.preventDefault();
+    console.log("The adopt button was clicked.");
+  }
 
   const dogArray = [];
 
@@ -107,7 +134,7 @@ function View() {
     <div style={style.div}>
       <Carousel
         id="carouselExampleControls"
-        class="carousel slide "
+        className="carousel carousel-dark slide "
         data-ride="carousel"
         interval={null}
       >

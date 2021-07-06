@@ -3,11 +3,14 @@ export const QUERY_DOGS = gql`
   query allDogs {
     dogs {
       _id
+      image
       name
-      breed
+      desc
       age
       size
       gender
+      liked
+      adopted
     }
   }
 `;
@@ -15,11 +18,14 @@ export const QUERY_SINGLE_DOG = gql`
   query singleDog($dogId: ID!) {
     dog(dogId: $dogId) {
       _id
+      image
       name
-      breed
+      desc
       age
       size
       gender
+      liked
+      adopted
     }
   }
 `;
