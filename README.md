@@ -47,5 +47,4 @@ None at this time.
 
 # Questions
 
-If you have any questions feel free to contact me and fellow contributors at:
-rgeisreiter@yahoo.com
+If you have any questions feel free to contact me at pjb.den@gmail.com
